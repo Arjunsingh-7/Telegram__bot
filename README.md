@@ -17,11 +17,17 @@ This is a full-stack Django + Telegram Bot project I built as part of my interns
    - Public and protected routes (tested via Postman)
 
 2. **Telegram Bot Functionality**
-3. 
-4. **Celery + Redis**
+   - Greets new users with a custom message and stores their info
+   - Sends:
+     - Text replies
+     - A PDF file (`example.pdf`)
+     - An image (`image.jpg`)
+     - A voice message (`voice.ogg`)
+
+3. **Celery + Redis**
    - Asynchronous job handling (extensible for background tasks like logging, alerts, etc.)
 
-5. **Clean Codebase**
+4. **Clean Codebase**
    - Proper `.gitignore` to exclude virtual environments and cache
    - Virtualenv used for dependency isolation
 
@@ -53,3 +59,15 @@ python manage.py runserver
 # 4. Run Telegram Bot
 python run_telegram_bot.py
 
+
+
+## 📁 Folder Structure
+
+Telegram_bot/
+├── core/                   # Django app for APIs
+├── telegram_bot/           # Bot logic and models
+├── internship_project/     # Django project config
+├── run_telegram_bot.py     # Script to start bot
+├── requirements.txt
+├── .gitignore
+└── README.md
